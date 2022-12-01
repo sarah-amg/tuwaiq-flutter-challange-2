@@ -16,13 +16,17 @@ class ModelBottom extends StatelessWidget {
             backgroundColor: Colors.purple[900]),
         onPressed: () {
           showModalBottomSheet(
+            shape: RoundedRectangleBorder( 
+          borderRadius: BorderRadius.vertical( 
+            top: Radius.circular(25.0),
+          )),
               context: context,
               builder: (BuildContext context) {
                 return Container(
                   height: 450,
                   width: 500,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(25),
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -47,63 +51,72 @@ class ModelBottom extends StatelessWidget {
                                 color: Colors.purple[900]),
                           ),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        SizedBox(height: 20,),
+                        SizedBox(
+                          width: 200,
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Allow Teacher",
-                                  style: TextStyle(color: Colors.purple[900]),
+                                Align(
+                                  
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Allow Teacher",
+                                        style: TextStyle(color: Colors.purple[900]),
+                                      ),
+                                      Switch(
+                                          activeColor: Colors.green,
+                                          value: true,
+                                          onChanged: (onChanged) {}),
+                                    ],
+                                  ),
                                 ),
-                                Switch(
-                                    activeColor: Colors.green,
-                                    value: true,
-                                    onChanged: (onChanged) {}),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Allow Students",
+                                      style: TextStyle(color: Colors.purple[900]),
+                                    ),
+                                    Switch(
+                                        activeColor: Colors.green,
+                                        value: true,
+                                        onChanged: (onChanged) {}),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Allow Attendance",
+                                      style: TextStyle(color: Colors.purple[900]),
+                                    ),
+                                    Switch(
+                                        activeColor: Colors.green,
+                                        value: true,
+                                        onChanged: (onChanged) {}),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Allow Edit",
+                                      style: TextStyle(color: Colors.purple[900]),
+                                    ),
+                                    Switch(
+                                        activeColor: Colors.green,
+                                        value: true,
+                                        onChanged: (onChanged) {}),
+                                  ],
+                                ),
                               ],
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "Allow Students",
-                                  style: TextStyle(color: Colors.purple[900]),
-                                ),
-                                Switch(
-                                    activeColor: Colors.green,
-                                    value: true,
-                                    onChanged: (onChanged) {}),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "Allow Attendance",
-                                  style: TextStyle(color: Colors.purple[900]),
-                                ),
-                                Switch(
-                                    activeColor: Colors.green,
-                                    value: true,
-                                    onChanged: (onChanged) {}),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "Allow Edit",
-                                  style: TextStyle(color: Colors.purple[900]),
-                                ),
-                                Switch(
-                                    activeColor: Colors.green,
-                                    value: true,
-                                    onChanged: (onChanged) {}),
-                              ],
-                            ),
-                          ],
+                          ),
                         )
                       ],
                     ),

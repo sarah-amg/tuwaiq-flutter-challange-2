@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                       const Text("UX Design",
                           style: TextStyle(fontWeight: FontWeight.bold)),
                             const Text(
-                  "28 Students",
+                  "  28 Students",
                               ),
                     ],
                   ),
